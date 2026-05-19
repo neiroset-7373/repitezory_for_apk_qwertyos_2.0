@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Capacitor
+android/.gradle/
+android/local.properties
+android/app/build/
+android/app/.externalNativeBuild/
+android/app/.cxx/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Capacitor config (generated)
+android/capacitor.config.json
+android/capacitor.settings.gradle

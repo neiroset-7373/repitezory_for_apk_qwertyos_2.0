@@ -1,0 +1,73 @@
+﻿name: Build APK
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        cd wintophone
+        npm ci
+
+    - name: Build React app
+      run: |
+        cd wintophone
+        npm run build
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Install Capacitor CLI
+      run: |
+        npm install -g @capacitor/cli @capacitor/core
+
+    - name: Initialize Capacitor
+      run: |
+        cd wintophone
+        npx cap init WintoPhone com.qwertyos.wintophone --web-dir dist
+
+    - name: Add Android platform
+      run: |
+        cd wintophone
+        npm install @capacitor/android
+        npx cap add android
+
+    - name: Sync Capacitor
+      run: |
+        cd wintophone
+        npx cap sync android
+
+    - name: Build APK
+      run: |
+        cd wintophone/android
+        echo "org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8" >> gradle.properties
+        echo "android.useAndroidX=true" >> gradle.properties
+        ./gradlew assembleDebug
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: winto-phone-apk
+        path: wintophone/android/app/build/outputs/apk/debug/app-debug.apk
