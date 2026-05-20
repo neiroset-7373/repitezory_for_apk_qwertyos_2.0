@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/OOBE.css';
+import './styles/OOBE.css';
 
 interface OOBEProps {
   onComplete: (theme: string, iconStyle: string) => void;

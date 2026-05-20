@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/SetupScreen.css';
+import './styles/SetupScreen.css';
 
 interface SetupScreenProps {
   onComplete: () => void;

@@ -1,7 +1,7 @@
 {
-  "name": "winto-phone",
+  "name": "qwerui-wintophone-simulator",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.01.34.11",
   "type": "module",
   "scripts": {
     "dev": "vite",

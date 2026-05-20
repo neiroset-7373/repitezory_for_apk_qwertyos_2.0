@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
-import '../styles/QwertyApps.css';
+import './styles/QwertyApps.css';
 
 interface QwertyAppsProps {
   onClose: () => void;

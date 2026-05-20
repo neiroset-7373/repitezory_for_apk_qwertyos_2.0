@@ -1,5 +1,5 @@
 ﻿import React, { useState, useRef, useEffect } from 'react';
-import '../styles/MusicApp.css';
+import './styles/MusicApp.css';
 
 interface MusicAppProps {
   onClose: () => void;

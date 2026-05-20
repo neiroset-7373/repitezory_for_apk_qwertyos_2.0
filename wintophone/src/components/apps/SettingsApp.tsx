@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/SettingsApp.css';
-import PatternLock from './PatternLock';
-import PinLock from './PinLock';
+import './styles/SettingsApp.css';
+import PatternLock from '../SYSTEM/PatternLock';
+import PinLock from '../SYSTEM/PinLock';
 
 interface SettingsAppProps {
   onClose: () => void;

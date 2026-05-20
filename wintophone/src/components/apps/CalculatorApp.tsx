@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/CalculatorApp.css';
+import './styles/CalculatorApp.css';
 
 interface CalculatorAppProps {
   onClose: () => void;

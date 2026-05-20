@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/MessagesApp.css';
+import './styles/MessagesApp.css';
 
 interface MessagesAppProps {
   onClose: () => void;

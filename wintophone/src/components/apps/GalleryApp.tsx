@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/GalleryApp.css';
+import './styles/GalleryApp.css';
 
 interface GalleryAppProps {
   onClose: () => void;

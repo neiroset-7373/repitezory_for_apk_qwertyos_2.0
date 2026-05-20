@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/DialerApp.css';
+import './styles/DialerApp.css';
 
 interface DialerAppProps {
   onClose: () => void;

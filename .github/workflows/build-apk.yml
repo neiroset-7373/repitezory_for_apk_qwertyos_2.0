@@ -46,7 +46,7 @@ jobs:
     - name: Initialize Capacitor
       run: |
         cd wintophone
-        npx cap init WintoPhone com.qwertyos.wintophone --web-dir dist
+        npx cap init "QwerUI - WintoPhone Simulator" com.wintozo.qwertyos --web-dir dist
 
     - name: Add Android platform
       run: |
@@ -69,5 +69,5 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: winto-phone-apk
+        name: QwerUI-WintoPhone-Simulator-APK
         path: wintophone/android/app/build/outputs/apk/debug/app-debug.apk

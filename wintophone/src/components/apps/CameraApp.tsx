@@ -1,5 +1,5 @@
 ﻿import React, { useRef, useState, useEffect } from 'react';
-import '../styles/Camera.css';
+import './styles/Camera.css';
 
 interface CameraAppProps {
   onClose: () => void;

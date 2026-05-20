@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/BrowserApp.css';
+import './styles/BrowserApp.css';
 
 interface BrowserAppProps {
   onClose: () => void;

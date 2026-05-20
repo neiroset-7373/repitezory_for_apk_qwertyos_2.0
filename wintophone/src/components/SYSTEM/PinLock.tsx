@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/PinLock.css';
+import './styles/PinLock.css';
 
 interface PinLockProps {
   onUnlock: () => void;

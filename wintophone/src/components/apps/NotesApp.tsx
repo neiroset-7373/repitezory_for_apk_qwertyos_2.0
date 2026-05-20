@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/NotesApp.css';
+import './styles/NotesApp.css';
 
 interface NotesAppProps {
   onClose: () => void;

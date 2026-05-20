@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/PhoneFrame.css';
+import './styles/PhoneFrame.css';
 
 interface PhoneFrameProps {
   children: React.ReactNode;

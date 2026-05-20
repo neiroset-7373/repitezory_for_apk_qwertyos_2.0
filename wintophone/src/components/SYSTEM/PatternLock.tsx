@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/PatternLock.css';
+import './styles/PatternLock.css';
 
 interface PatternLockProps {
   onUnlock: () => void;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/NavigationBar.css';
+import './styles/NavigationBar.css';
 
 interface NavigationBarProps {
   onHome: () => void;
